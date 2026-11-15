@@ -1,0 +1,6 @@
+# local tooling, not part of the site
+.taste-skill/
+graphify-out/
+.claude/
+CLAUDE.md
+ADMIN-PASSWORD.txt

@@ -1,0 +1,149 @@
+/* Gentleman Barbershop Tbilisi — ადმინ პანელის სტილი. მშვიდი სამუშაო ეკრანი იმავე ფერებში, რაც საიტს აქვს. */
+:root {
+  --bg: #0e0d0c; --surface: #1a1610; --surface-2: #272017; --line: #3a3022;
+  --ink: #f0e9dc; --muted: #b6ab96; --accent: #c8a25a; --accent-hi: #dfbd7a; --accent-ink: #17120a;
+  --ok: #86d8a0; --warn: #e9c46a; --bad: #f08a7a;
+  --f-display: "Cormorant Garamond", "Noto Serif Georgian", Georgia, serif;
+  --f-text: "Noto Sans", "Noto Sans Georgian", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--f-text); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, p { margin: 0; }
+a { color: inherit; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; touch-action: manipulation; }
+img { display: block; max-width: 100%; }
+[hidden] { display: none !important; }
+:focus-visible { outline: 2px solid var(--accent-hi); outline-offset: 2px; }
+
+/* ---------- შესვლა ---------- */
+.login { min-height: 100dvh; display: grid; place-items: center; padding: 24px; }
+.login-card { width: 100%; max-width: 400px; display: grid; gap: 18px; background: var(--surface); padding: 36px 28px; }
+.login-mark { width: 52px; height: 52px; }
+.login-card h1 { font-family: var(--f-display); font-weight: 300; font-size: 2rem; line-height: 1.15; }
+.hint { color: var(--muted); font-size: 0.9375rem; }
+.pw-row { display: grid; grid-template-columns: 1fr auto; gap: 8px; }
+.back { color: var(--muted); font-size: 0.9375rem; text-underline-offset: 4px; min-height: 44px; display: inline-flex; align-items: center; }
+.back:hover { color: var(--ink); }
+
+/* ---------- ველები ---------- */
+.f { display: grid; gap: 6px; min-width: 0; }
+.f label, .f .lab { font-size: 0.875rem; font-weight: 600; color: var(--muted); }
+input[type="text"], input[type="password"], input[type="tel"], input[type="email"], input[type="url"], input[type="number"], input[type="time"], select, textarea {
+  width: 100%; min-height: 46px; padding: 10px 12px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 0; color: var(--ink);
+  transition: border-color 160ms, background-color 160ms;
+}
+textarea { resize: vertical; min-height: 84px; line-height: 1.45; }
+input:hover, select:hover, textarea:hover { border-color: #55473c; }
+input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent-hi); outline-offset: 0; border-color: transparent; }
+input::placeholder, textarea::placeholder { color: var(--muted); opacity: 0.6; }
+input[type="time"]::-webkit-calendar-picker-indicator { filter: invert(0.9); }
+input[type="checkbox"] { width: 20px; height: 20px; accent-color: var(--accent); }
+.check { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-weight: 500; cursor: pointer; }
+.err { color: #ffb3a6; font-size: 0.875rem; font-weight: 500; }
+.help { color: var(--muted); font-size: 0.875rem; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 0 20px; background: var(--accent); color: var(--accent-ink); border: 0; font-weight: 600; text-decoration: none; transition: background-color 160ms, transform 160ms; }
+.btn:hover { background: var(--accent-hi); }
+.btn:active { transform: scale(0.97); }
+.ghost { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 14px; background: transparent; border: 1px solid var(--line); color: var(--ink); font-weight: 500; font-size: 0.9375rem; text-decoration: none; white-space: nowrap; transition: background-color 160ms, border-color 160ms; }
+.ghost:hover { background: var(--surface-2); border-color: #55473c; }
+.ghost:active { transform: scale(0.97); }
+.ghost.danger { color: #ffb3a6; }
+.ghost.danger:hover { background: #3a1f1b; border-color: #7a3b33; }
+.icon { width: 44px; padding: 0; font-size: 1.125rem; }
+.ghost:disabled { opacity: 0.35; cursor: not-allowed; }
+
+/* ---------- ჩარჩო ---------- */
+.top { position: static; z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 10px 20px; background: var(--bg); border-bottom: 1px solid var(--line); }
+.top-brand { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; text-decoration: none; font-family: var(--f-display); font-size: 1.125rem; }
+.top-brand svg { width: 30px; height: 30px; }
+.top-brand em { font-style: normal; color: var(--accent-hi); font-family: var(--f-text); font-size: 0.875rem; font-weight: 600; margin-left: 4px; }
+.top-end { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.seg { display: inline-flex; align-items: center; border: 1px solid var(--line); }
+.seg-label { padding: 0 10px 0 12px; font-size: 0.8125rem; color: var(--muted); white-space: nowrap; }
+.seg button { min-width: 44px; height: 42px; background: transparent; border: 0; font-weight: 600; font-size: 0.875rem; color: var(--muted); }
+.seg button:hover { color: var(--ink); }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+
+.shell { display: grid; }
+.tabs { display: flex; gap: 4px; overflow-x: auto; padding: 10px 20px; border-bottom: 1px solid var(--line); scrollbar-width: none; position: sticky; top: 0; z-index: 10; background: var(--bg); }
+.tabs::-webkit-scrollbar { display: none; }
+.tabs button { flex: none; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; background: transparent; border: 0; color: var(--muted); font-weight: 500; white-space: nowrap; text-align: left; transition: background-color 160ms, color 160ms; }
+.tabs button:hover { color: var(--ink); background: var(--surface); }
+.tabs button[aria-current="page"] { background: var(--surface-2); color: var(--ink); font-weight: 600; }
+.badge { display: inline-grid; place-items: center; min-width: 22px; height: 22px; padding: 0 6px; border-radius: 11px; background: var(--accent); color: var(--accent-ink); font-size: 0.8125rem; font-weight: 600; }
+.panel { padding: 24px 20px 96px; max-width: 1080px; width: 100%; outline: none; }
+
+.panel-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+.panel-head h2 { font-family: var(--f-display); font-weight: 300; font-size: 1.875rem; line-height: 1.15; }
+.panel-head p { color: var(--muted); max-width: 60ch; margin-top: 6px; }
+.h3 { font-size: 1.0625rem; font-weight: 600; margin: 28px 0 12px; }
+.card { background: var(--surface); padding: 16px; display: grid; gap: 14px; margin-bottom: 12px; }
+.grid2 { display: grid; gap: 14px; }
+.row-tools { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.spacer { flex: 1; }
+.thumb { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; background: var(--surface-2); }
+.thumb.tall { aspect-ratio: 3 / 4; }
+.thumb-empty { display: grid; place-items: center; color: var(--muted); font-size: 0.875rem; }
+.media { display: grid; grid-template-columns: 112px 1fr; gap: 14px; align-items: start; }
+.stack { display: grid; gap: 14px; min-width: 0; }
+.empty { background: var(--surface); padding: 36px 20px; text-align: center; color: var(--muted); }
+.empty strong { display: block; color: var(--ink); font-size: 1.0625rem; margin-bottom: 4px; }
+
+/* სერვისის სტრიქონი */
+.svc { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; background: var(--surface); padding: 14px; margin-bottom: 8px; }
+.svc .f-name, .svc .f-desc, .svc .row-tools { grid-column: 1 / -1; }
+
+/* საათები */
+.hours-row { display: grid; grid-template-columns: 1fr; gap: 8px; align-items: center; background: var(--surface); padding: 12px 14px; margin-bottom: 6px; }
+.hours-row .times { display: grid; grid-template-columns: 1fr 1fr auto; gap: 8px; align-items: center; }
+.hours-day { font-weight: 600; }
+
+/* ჯავშნები */
+.filters { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+.filters button { min-height: 40px; padding: 0 14px; background: var(--surface); border: 1px solid var(--line); color: var(--muted); font-weight: 500; }
+.filters button[aria-pressed="true"] { background: var(--surface-2); color: var(--ink); border-color: var(--accent); }
+.bk { display: grid; gap: 10px; background: var(--surface); padding: 14px 16px; margin-bottom: 8px; border-left: 4px solid var(--warn); }
+.bk[data-status="confirmed"] { border-left-color: var(--ok); }
+.bk[data-status="cancelled"] { border-left-color: var(--bad); opacity: 0.72; }
+.bk-when { font-weight: 600; font-size: 1.0625rem; font-variant-numeric: tabular-nums; }
+.bk-what { color: var(--ink); }
+.bk-who { color: var(--muted); }
+.bk-who a { color: var(--ink); text-underline-offset: 4px; }
+.bk-tools { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.bk-tools select { width: auto; min-width: 170px; }
+.bk-meta { color: var(--muted); font-size: 0.8125rem; }
+
+.gal { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+.gal .card { margin: 0; align-content: start; }
+
+.toast { position: fixed; left: 50%; bottom: 20px; transform: translate(-50%, 20px); z-index: 50; padding: 12px 18px; background: var(--ink); color: var(--bg); font-weight: 600; opacity: 0; pointer-events: none; transition: opacity 200ms, transform 200ms; max-width: calc(100vw - 32px); text-align: center; }
+.toast.is-on { opacity: 1; transform: translate(-50%, 0); }
+.toast.is-bad { background: #f3b0a6; }
+
+@media (min-width: 640px) {
+  .grid2 { grid-template-columns: 1fr 1fr; }
+  .media { grid-template-columns: 180px 1fr; }
+  .svc { grid-template-columns: 2fr 1fr 1fr 1.4fr; }
+  .svc .f-name { grid-column: 1 / 2; }
+  .hours-row { grid-template-columns: 140px 1fr; }
+  .bk { grid-template-columns: 170px 1fr auto; align-items: center; }
+}
+@media (min-width: 980px) {
+  .top { position: sticky; top: 0; }
+  .shell { grid-template-columns: 250px 1fr; align-items: start; }
+  .tabs { flex-direction: column; overflow: visible; border-bottom: 0; border-right: 1px solid var(--line); padding: 20px 12px; top: 65px; min-height: calc(100dvh - 65px); }
+  .tabs button { width: 100%; justify-content: space-between; }
+  .panel { padding: 32px 36px 96px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition-duration: 0.01ms !important; } }
+
+/* ფილტრი ბარბერით, ენების ჩამრთველები */
+.filter-select { display: inline-flex; align-items: center; gap: 8px; margin-left: auto; font-size: 14px; color: var(--muted); }
+.filter-select select { min-height: 40px; padding: 0 12px; background: var(--surface-2); border: 0; color: var(--ink); }
+.f-label { font-size: 14px; font-weight: 600; color: var(--muted); }
+h1, h2, .top-brand span { font-weight: 600; }
+.filter-select input[type="date"] { min-height: 40px; width: auto; padding: 0 12px; background: var(--surface-2); border: 0; color: var(--ink); color-scheme: dark; }
+.filter-select + .filter-select { margin-left: 0; }
+.top-brand svg, .login-mark { fill: var(--accent); }
