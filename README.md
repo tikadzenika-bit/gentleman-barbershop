@@ -3,6 +3,8 @@
 ერთგვერდიანი საიტი თბილისური ბარბერშოპისთვის (საბურთალო, ბიძინა კვერნაძის 13) + მარტივი ადმინ პანელი.
 ეს **დემო ვერსიაა** მფლობელებისთვის საჩვენებლად: ფასები და ფოტოები ნიმუშია. საიტი: NNN Holding.
 
+Live: https://tikadzenika-bit.github.io/gentleman-barbershop/ · admin: https://tikadzenika-bit.github.io/gentleman-barbershop/admin.html
+
 ## როგორ გავხსნა
 
 **ყველაზე მარტივად:** ორჯერ დააწკაპუნე `index.html`-ზე — იხსნება ბრაუზერში, build არ სჭირდება.
