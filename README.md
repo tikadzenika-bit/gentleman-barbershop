@@ -1,7 +1,7 @@
 # Gentleman Barbershop Tbilisi — დემო საიტი
 
 ერთგვერდიანი საიტი თბილისური ბარბერშოპისთვის (საბურთალო, ბიძინა კვერნაძის 13) + მარტივი ადმინ პანელი.
-ეს **დემო ვერსიაა** მფლობელებისთვის საჩვენებლად: ფასები და ფოტოები ნიმუშია. საიტი: NNN Holding.
+ეს **დემო ვერსიაა** მფლობელებისთვის საჩვენებლად: ფასები და ფოტოები ნიმუშია. საიტი: Gridline.
 
 Live: https://tikadzenika-bit.github.io/gentleman-barbershop/ · admin: https://tikadzenika-bit.github.io/gentleman-barbershop/admin.html
 

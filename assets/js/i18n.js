@@ -60,7 +60,7 @@
       'footer.demo': 'დემო ვერსია — ფასები და ფოტოები ნიმუშია.',
       'footer.credits': 'ფოტოები: Nick Demou, Robin Vanden Berghe, Skitter Photo, Christoffer Engström — StockSnap (CC0).',
       'footer.map': 'რუკა © OpenStreetMap-ის მონაწილეები.',
-      'footer.by': 'საიტი: NNN Holding',
+      'footer.by': 'საიტი: Gridline',
       'float.wa': 'მოგვწერე WhatsApp-ზე'
     },
     en: {
@@ -120,7 +120,7 @@
       'footer.demo': 'Demo version — prices and photos are samples.',
       'footer.credits': 'Photos: Nick Demou, Robin Vanden Berghe, Skitter Photo, Christoffer Engström — StockSnap (CC0).',
       'footer.map': 'Map © OpenStreetMap contributors.',
-      'footer.by': 'Website: NNN Holding',
+      'footer.by': 'Website: Gridline',
       'float.wa': 'Message us on WhatsApp'
     },
     ru: {
@@ -180,7 +180,7 @@
       'footer.demo': 'Демо-версия — цены и фотографии являются образцами.',
       'footer.credits': 'Фото: Nick Demou, Robin Vanden Berghe, Skitter Photo, Christoffer Engström — StockSnap (CC0).',
       'footer.map': 'Карта © участники OpenStreetMap.',
-      'footer.by': 'Сайт: NNN Holding',
+      'footer.by': 'Сайт: Gridline',
       'float.wa': 'Написать в WhatsApp'
     }
   };
